@@ -43,10 +43,15 @@ export default function ProjectCard({ project, index }) {
           ))}
         </div>
         {project.isProjectActive && (
-          <button className="inline-flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-lg group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-lg group-hover:shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300"
+          >
             View Project
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         )}
       </div>
     </div>
