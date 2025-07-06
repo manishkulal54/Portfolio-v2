@@ -17,7 +17,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Hi ${name}, I am ${nameRef.current.value},\n\n${messageRef.current.value}`
     );
-    window.location.href = `mailto:${email}?subject=${subject}?body=${body}`;
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   }
   return (
     <section className="py-24 px-6 md:px-20">
