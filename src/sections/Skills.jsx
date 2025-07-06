@@ -26,8 +26,9 @@ export default function Skills({ languages, skills, stacks, tools }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="w-full h-100 bg-gray-900/30 backdrop-blur-sm rounded-3xl border border-gray-700/30 p-6">
-              <ResponsiveContainer width="100%" height="100%" aspect={1}>
+            {/* Mobile: smaller container */}
+            <div className="w-full h-72 md:h-96 bg-gray-900/30 backdrop-blur-sm rounded-3xl border border-gray-700/30 p-6">
+              <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={languages}
@@ -35,8 +36,8 @@ export default function Skills({ languages, skills, stacks, tools }) {
                     cy="50%"
                     startAngle={90}
                     endAngle={-270}
-                    innerRadius={120}
-                    outerRadius={200}
+                    innerRadius="30%" // Use percentages for responsiveness
+                    outerRadius="80%" // Use percentages for responsiveness
                     dataKey="value"
                     isAnimationActive={true}
                     animationDuration={2000}
@@ -60,7 +61,7 @@ export default function Skills({ languages, skills, stacks, tools }) {
                           fill="#fff"
                           textAnchor="middle"
                           dominantBaseline="central"
-                          className="text-s font-semibold"
+                          className="text-xs md:text-sm font-semibold"
                         >
                           {languages[index].name}
                         </text>

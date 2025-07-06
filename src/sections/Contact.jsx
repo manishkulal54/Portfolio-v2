@@ -1,23 +1,23 @@
 import { Mail } from "lucide-react";
-import React from "react";
+import { useRef } from "react";
+import { socials, name } from "../data";
 
 export default function Contact() {
+  const nameRef = useRef();
+  const messageRef = useRef();
+
   function handleMailSend(e) {
     e.preventDefault();
-    console.log(1);
 
-    // const name = document.getElementById("name").value;
-    // const email = document.getElementById("email").value;
-    // const message = document.getElementById("message").value;
+    const email = socials
+      .find((items) => items.name == "Email")
+      .url.replace("mailto:", "");
 
-    // const to = "your@email.com"; // Replace with your own email
-    // const subject = encodeURIComponent("Requesting to connect you");
-    // const body = encodeURIComponent(`Hi, I am ${name} (${email}).\n\n${message}`);
-
-    // // Open default email client
-    // window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    window.location.href =
-      "mailto:manishkulal.dev@gmail.com&subject=helloworld&body=hiimanishhowareyou";
+    const subject = encodeURIComponent("Requesting to connect you");
+    const body = encodeURIComponent(
+      `Hi ${name}, I am ${nameRef.current.value},\n\n${messageRef.current.value}`
+    );
+    window.location.href = `mailto:${email}?subject=${subject}?body=${body}`;
   }
   return (
     <section className="py-24 px-6 md:px-20">
@@ -35,6 +35,7 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="Your Name"
+                ref={nameRef}
                 className="w-full px-6 py-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-colors duration-300"
               />
               <input
@@ -46,11 +47,12 @@ export default function Contact() {
             <textarea
               placeholder="Tell me about your project..."
               rows={6}
+              ref={messageRef}
               className="w-full px-6 py-4 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-colors duration-300 resize-none"
             ></textarea>
             <div className="text-center">
               <button
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold px-8 py-4 rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                className="flex items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold px-8 py-4 rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                 onClick={(e) => {
                   handleMailSend(e);
                 }}

@@ -31,25 +31,50 @@ const tools = [
 
 const projects = [
   {
-    title: "Full-Stack E-Commerce Platform",
+    title: "Food recipe app",
     description:
-      "Modern e-commerce solution with real-time inventory, payment integration, and admin dashboard.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      "This is an application that provides recipes for various food items, including ingredients and step-by-step cooking instructions.",
+    tech: ["HTML5", "CSS", "Javascript", "Bootstrap"],
     isProjectActive: true,
+    url: "https://manishkulal-foodrecipe.netlify.app"
   },
   {
-    title: "AI-Powered Analytics Dashboard",
+    title: "Restaurant management system",
     description:
-      "Data visualization platform with machine learning insights and predictive analytics.",
-    tech: ["Python", "React", "TensorFlow", "PostgreSQL"],
+      "Restaurant Management System is an application that helps manage various restaurant operations such as order processing, menu management, and order monitoring efficiently.",
+    tech: ["ReactJs", "NodeJs", "ExpressJs", "MongoDb", "Bootstrap"],
     isProjectActive: true,
+    url: "https://manishkulal-restaurant-management.netlify.app"
   },
   {
-    title: "Real-Time Collaboration Tool",
+    title: "Invoice management system",
     description:
-      "Team productivity app with live editing, video calls, and project management features.",
-    tech: ["React", "Socket.io", "MongoDB", "WebRTC"],
+      "Invoice Management System automates the creation, processing, and tracking of invoices to streamline billing and payment workflows.",
+    tech: ["C#", ".Net", "SSMS"],
+    isProjectActive: false
+  },
+  {
+    title: "FreeChat application",
+    description:
+      "A Chatting Application enables real-time text communication between users over the internet.",
+    tech: ["C#", ".Net", "SSMS", "SignalR", "PostgreSql"],
+    isProjectActive: false
+  },
+  {
+    title: "ICloud-Notebook",
+    description:
+      "This allows users to create, store, and access notes online from any device, enabling real-time collaboration and synchronization.",
+    tech: ["ReactJs", "NodeJs", "ExpressJs", "MongoDb", "Bootstrap"],
     isProjectActive: true,
+    url: "https://manishkulal-cloudnotebook.netlify.app"
+  },
+  {
+    title: "Text Utils",
+    description:
+      "Text Utils is a tool that provides various text processing features like formatting, analyzing, and storing text quickly and easily.",
+    tech: ["ReactJs", "Bootstrap"],
+    isProjectActive: true,
+    url: "https://manishkulal-textutil.netlify.app/"
   },
 ];
 
@@ -101,6 +126,9 @@ const aboutMe = `I'm a results-oriented software developer with an extensive
               experiences. Apart from coding, I read about new tools, come up
               with ideas for products, and interact with tech communities.`;
 
+const name = "Manish"
+
+
 export {
   languages,
   skills,
@@ -111,4 +139,5 @@ export {
   heroStrings,
   quote,
   aboutMe,
+  name
 };

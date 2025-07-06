@@ -9,7 +9,7 @@ export default function Footer() {
           and precision.
         </p>
         <div className="flex justify-center space-x-8">
-          <SocialIcons />
+          <SocialIcons isMailVisible={true} />
         </div>
       </div>
     </footer>

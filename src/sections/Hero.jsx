@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, Star, Zap } from "lucide-react";
 import profilePic from "../assets/profile.jpg";
 import SocialIcons from "../components/SocialIcons";
 import Typewriter from "typewriter-effect";
-import { heroStrings, quote, socials } from "../data";
+import { heroStrings, quote, socials, name } from "../data";
 
 export default function Hero({ isLoaded }) {
   return (
@@ -26,7 +26,7 @@ export default function Hero({ isLoaded }) {
               <h1 className="text-6xl md:text-7xl font-black leading-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-                  Manish
+                  {name}
                 </span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-light text-gray-300">
@@ -84,7 +84,6 @@ export default function Hero({ isLoaded }) {
                   </div>
                 </div>
               </div>
-              {/* <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div> */}
             </div>
           </div>
         </div>
